@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -7,14 +8,23 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'message/:id',
-    loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
-  },
-  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'registration-confirmation',
+    loadChildren: () => import('./registration-confirmation/registration-confirmation.module').then( m => m.RegistrationConfirmationPageModule)
+  },
+  {
+    path: 'registration-completed',
+    loadChildren: () => import('./registration-completed/registration-completed.module').then( m => m.RegistrationCompletedPageModule)
+  },
+
 ];
 
 @NgModule({

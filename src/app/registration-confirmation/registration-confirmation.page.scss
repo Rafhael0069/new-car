@@ -1,0 +1,32 @@
+.container {
+  border: 1px solid black;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box
+}
+
+.textos{
+  padding: 0 2.5%;
+  margin: 0;
+}
+
+.textos p{
+  color: #ffffff;
+  font-size: 25px;
+  text-align: start;
+}
+.textos span{
+  font-style: italic;
+}
+
+.botoes{
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.botao{
+  width: 95%;
+  margin-top: 10px;
+  font-size: 20px;
+}

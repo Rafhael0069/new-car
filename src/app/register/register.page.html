@@ -6,27 +6,23 @@
 
 <ion-content>
   <div class="container">
-    <form [formGroup]="formData" (ngSubmit)="onSubmit()"
+    <form novalidate [formGroup]="carroForm" (ngSubmit)="onSubmit()"
     class="formulario" >
-      <ion-list>
-        <ion-item class="form-item">
-          <ion-label>Marca: </ion-label>
-          <ion-input formControlName="marca"></ion-input>
-        </ion-item>
-        <ion-item class="form-item">
-          <ion-label>Modelo: </ion-label>
-          <ion-input formControlName="modelo"></ion-input>
-        </ion-item>
-        <ion-item class="form-item">
-          <ion-label>Cor: </ion-label>
-          <ion-input formControlName="cor"></ion-input>
-        </ion-item>
-        <ion-item class="form-item">
-          <ion-label>Placa: </ion-label>
-          <ion-input formControlName="placa"></ion-input>
-        </ion-item>
-      </ion-list>
-      <ion-button class="botao" type="submit" >Cadastrar</ion-button>
+    <ion-list>
+      <ion-item class="form-item">
+        <ion-input type="text" placeholder="Marca" formControlName="marca"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input type="text" placeholder="Modelo" formControlName="modelo"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input type="text" placeholder="Cor" formControlName="cor"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input type="text" placeholder="Placa" formControlName="placa"></ion-input>
+      </ion-item>
+    </ion-list>
+      <ion-button class="botao" type="submit" [disabled]="carroForm.invalid">Cadastrar</ion-button>
       <ion-button class="botao" (click)="redirectToHomePage()">Cancelar</ion-button>
     </form>
   </div>

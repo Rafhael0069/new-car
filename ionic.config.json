@@ -1,0 +1,8 @@
+{
+  "name": "NewCar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "a9b80041"
+}
